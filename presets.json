@@ -1,0 +1,1462 @@
+{
+  "preset_0": [
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "RAND",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    }
+  ],
+  "preset_1": [
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "RAND",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "TRI",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SQR",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    }
+  ],
+  "preset_2": [
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    }
+  ],
+  "preset_3": [
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    }
+  ],
+  "preset_4": [
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    }
+  ],
+  "preset_5": [
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    }
+  ],
+  "preset_6": [
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    }
+  ],
+  "preset_7": [
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    }
+  ],
+  "preset_8": [
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    }
+  ],
+  "preset_9": [
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    },
+    {
+      "channel": 1,
+      "cc": 1,
+      "shape": "SINE",
+      "min": 0,
+      "max": 127,
+      "offset": 0,
+      "div": "1/4"
+    }
+  ]
+}
