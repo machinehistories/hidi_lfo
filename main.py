@@ -127,12 +127,14 @@ COLOR_STOP           = 0xFF0000
 # ===============================
 # DISPLAY
 # ===============================
+for item in displayio.CIRCUITPYTHON_TERMINAL:
+    item.hidden = True
 
 display  = board.DISPLAY
 main     = displayio.Group()
 display.root_group = main
 
-# Load the "HIDI" Bitmap
+#Load the "HIDI" Bitmap
 bitmap, palette = adafruit_imageload.load(
     "image.bmp",
     bitmap=displayio.Bitmap,
@@ -549,7 +551,7 @@ while True:
 
             for (ch, cc), total in cc_accumulator.items():
                 total = max(0, min(127, total))
-                midi.send(ControlChange(cc, int(total), channel=ch))
+                midi.send(ControlChange(cc, int(total)), channel=ch)
 
             clock_counter = 0
 
@@ -683,3 +685,4 @@ while True:
         display_timer = time.monotonic()
         update_panel()
         update_run_indicator()
+
