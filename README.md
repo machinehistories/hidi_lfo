@@ -53,6 +53,7 @@ Press **START** to toggle modulation playback.
 
 -   **RUN** --- MIDI modulation is active.
 -   **STOP** --- MIDI modulation is stopped.
+-   **REPL** --- hold the start button on startup to enable serial connection.
 
 The lower-right display shows the current state.
 
