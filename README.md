@@ -1,74 +1,106 @@
 # hidi_lfo
-grid of 16 lfos running in circuit python
-PyGamer 16-LFO MIDI Controller — Controls
-Joystick
+# PyGamer 16-LFO MIDI Controller
 
-Normal mode
+## Controls
 
-Left / Right — Move between LFO squares
-Up / Down — Move between rows
+### Joystick
 
-Hold A + Joystick
+**Normal mode** - **Left / Right** --- Move between LFO squares. - **Up
+/ Down** --- Move between rows.
 
-Up / Down — Select parameter
-Left / Right — Change selected parameter value
-Holding the joystick accelerates value changes.
-A — Edit
+**Hold A + Joystick** - **Up / Down** --- Select a parameter. - **Left /
+Right** --- Change the selected parameter value. - Holding the joystick
+accelerates value changes.
 
-Hold A to enter parameter editing mode.
+### A --- Edit
 
-Available parameters:
+Hold **A** to enter parameter editing mode. Release **A** to return the
+joystick to grid navigation.
 
-CH — MIDI channel 1–16
-CC — MIDI CC number 0–127
-SH — LFO/modulation shape
-MIN — Minimum CC output
-MAX — Maximum CC output
-OFFS — Output offset
-BAR — LFO clock division
+Parameters:
 
-Release A to return the joystick to grid navigation.
+-   **CH** --- MIDI channel 1--16
+-   **CC** --- MIDI CC number 0--127
+-   **SH** --- Modulation shape
+-   **MIN** --- Minimum CC output
+-   **MAX** --- Maximum CC output
+-   **OFFS** --- Output offset
+-   **BAR** --- Clock division
 
-B — Shape Paint
+### B --- Shape Paint
 
-Press B on a square to advance it to the next modulation shape.
+Press **B** on a square to advance it to the next modulation shape.
 
-Hold B + move the joystick to paint/cycle shapes across multiple squares.
+Hold **B** while moving the joystick to paint/cycle shapes across
+multiple squares.
 
-Current shapes are:
+Current shapes:
 
-OFF → SINE → TRI → RAND → SQR → LGHT → IMX → IMY
+`OFF → SINE → TRI → RAND → SQR → LGHT → IMX → IMY`
 
-LGHT uses the PyGamer light sensor; IMX and IMY use its accelerometer axes.
+-   **OFF** --- No CC output
+-   **SINE** --- Sine-wave modulation
+-   **TRI** --- Triangle-wave modulation
+-   **RAND** --- Random modulation
+-   **SQR** --- Square-wave modulation
+-   **LGHT** --- PyGamer light sensor mapped to MIDI CC
+-   **IMX** --- PyGamer accelerometer X-axis mapped to MIDI CC
+-   **IMY** --- PyGamer accelerometer Y-axis mapped to MIDI CC
 
-START — Run / Stop
+### START --- Run / Stop
 
-Press START to toggle all LFOs:
+Press **START** to toggle modulation playback.
 
-RUN — MIDI modulation is active
-STOP — MIDI modulation is stopped
+-   **RUN** --- MIDI modulation is active.
+-   **STOP** --- MIDI modulation is stopped.
 
-The lower-right display indicates the current state.
+The lower-right display shows the current state.
 
-SELECT — Globals
+### SELECT --- Globals
 
-Press SELECT to open/close the Globals screen.
+Press **SELECT** to open or close the Globals screen.
 
-The joystick then controls:
+Use **Up / Down** to select a global setting and **Left / Right** to
+change it.
 
-CLK — INT / EXT MIDI clock
-BPM — Internal clock tempo
-PRE — Preset 0–9
-ACTION — SAVE / LOAD
+Globals:
 
-Use Up / Down to select a field and Left / Right to change it.
+-   **CLK** --- `INT` or `EXT` MIDI clock
+-   **BPM** --- Internal clock tempo
+-   **PRE** --- Preset 0--9
+-   **ACTION** --- `SAVE` or `LOAD`
 
-B — Save / Load while Globals is open
+### Saving and Loading Presets
 
-With Globals open:
+With the Globals screen open:
 
-Select the desired PRE number.
-Set ACTION to SAVE or LOAD.
-Press B to execute it.
+1.  Set **PRE** to the desired preset slot (0--9).
+2.  Select **ACTION**.
+3.  Choose `SAVE` or `LOAD` with Left / Right.
+4.  Press **B** to execute the selected action.
 
-Presets store the configuration of all 16 LFOs, including channel, CC, shape, min/max, offset, and clock division.
+Each preset stores the configuration of all 16 LFOs:
+
+-   MIDI channel
+-   MIDI CC number
+-   Shape
+-   Minimum
+-   Maximum
+-   Offset
+-   Clock division
+
+Presets are stored in `presets.json`.
+
+## Quick Reference
+
+  Control          Action
+  ---------------- --------------------------------
+  Joystick         Navigate 4×4 LFO grid
+  A + Up/Down      Select parameter
+  A + Left/Right   Adjust parameter
+  B                Cycle shape on current square
+  B + Joystick     Paint/cycle shapes across grid
+  START            Run / Stop
+  SELECT           Open / close Globals
+  B in Globals     Execute SAVE or LOAD
+
