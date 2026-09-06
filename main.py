@@ -19,6 +19,8 @@ from adafruit_display_shapes.rect import Rect
 from adafruit_display_text import label
 import adafruit_midi
 from adafruit_midi.control_change import ControlChange
+from adafruit_midi.pitch_bend import PitchBend
+from adafruit_midi.channel_pressure import ChannelPressure
 from adafruit_midi.midi_message import MIDIUnknownEvent
 
 # ===============================
@@ -111,13 +113,15 @@ midi = adafruit_midi.MIDI(
 # ===============================
 
 COLOR_OFF            = 0x101010
-COLOR_SINE           = 0x00FF80
+COLOR_SINE           = 0x0FFF30
 COLOR_TRI            = 0x00FF00
 COLOR_RAND           = 0xFF0000
 COLOR_SQR            = 0xFF00FF
 COLOR_LGHT           = 0xFFFF00
-COLOR_IMX            = 0x00A0FF
+COLOR_IMX            = 0xF0084F
 COLOR_IMY            = 0xFF8000
+COLOR_SAWU           = 0xAAAF6F
+COLOR_SAWD           = 0x0AFF8F
 COLOR_CURSOR         = 0xFFFFFF
 COLOR_PARAM_SELECTED = 0xFFFF00
 COLOR_PARAM_NORMAL   = 0xFFFFFF
@@ -207,26 +211,35 @@ for i, lbl in enumerate([clock_label, bpm_label, preset_label, action_label]):
 # LFO ENGINE
 # ===============================
 
-SHAPES     = ["OFF","SINE","TRI","RAND","SQR","LGHT","IMX","IMY"]
-CLOCK_DIVS = [96, 48, 24, 12, 6, 3, 1]
-DIV_LABELS = ["1BAR","1/2","1/4","1/8","1/16","1/32","1/96"]
+SHAPES     = ["OFF","SINE","TRI","RAND","SQR","LGHT","IMX","IMY","SAWU","SAWD"]
+CLOCK_DIVS = [1536, 768, 384, 192, 96, 48, 24, 12, 6, 3, 1.5]
+DIV_LABELS = ["16BAR","8BAR","4BAR","2BAR","1BAR","1/2","1/4","1/8","1/16","1/32","1/64"]
 
 class LFO:
     def __init__(self):
         self.channel       = 1
         self.cc            = 1
+        self.target_type   = "CC"   # CC / PB / AT
         self.shape         = 1
         self.min           = 0
         self.max           = 127
         self.offset        = 0
-        self.div_index     = 2
+        self.div_index     = 4
         self.phase         = 0
         self.tick_count    = 0
         self.value         = 0
         self.light_filtered = 0.0
+        self.random_value   = random.random()
 
-    def advance(self):
-        self.phase = (self.phase + 0.02) % 1.0
+    def advance(self, ticks=1):
+        # CLOCK_DIVS now defines the duration of one complete LFO cycle.
+        # MIDI clock is 24 PPQN, so 96 ticks = one 4/4 bar.
+        old_phase = self.phase
+        self.phase = (self.phase + (ticks / CLOCK_DIVS[self.div_index])) % 1.0
+
+        # RAND is sample-and-hold: choose one new value at each cycle boundary.
+        if self.shape == 3 and self.phase < old_phase:
+            self.random_value = random.random()
 
     def compute(self):
         if self.shape == 0:
@@ -236,7 +249,7 @@ class LFO:
         elif self.shape == 2:
             raw = abs(self.phase * 2 - 1)
         elif self.shape == 3:
-            raw = random.random()
+            raw = self.random_value
         elif self.shape == 4:
             raw = 1.0 if self.phase < 0.5 else 0.0
         elif self.shape == 5:
@@ -250,6 +263,10 @@ class LFO:
         elif self.shape == 7:
             x, y, z = lis3dh.acceleration
             raw = max(0.0, min(1.0, (y + 39.2) / 78.4))
+        elif self.shape == 8:
+            raw = self.phase
+        elif self.shape == 9:
+            raw = 1.0 - self.phase
 
         val = int(self.min + raw * (self.max - self.min)) + self.offset
 
@@ -294,12 +311,13 @@ def _div_to_index(name):
     try:
         return DIV_NAMES.index(name)
     except ValueError:
-        return 2  # default 1/4
+        return 4  # default 1/4
 
 def _lfo_to_dict(l):
     return {
         "channel": l.channel,
         "cc":      l.cc,
+        "target":  l.target_type,
         "shape":   SHAPE_NAMES[l.shape],
         "min":     l.min,
         "max":     l.max,
@@ -310,6 +328,7 @@ def _lfo_to_dict(l):
 def _dict_to_lfo(d, l):
     l.channel   = d.get("channel", 1)
     l.cc        = d.get("cc", 1)
+    l.target_type = d.get("target", "CC")
     l.shape     = _shape_to_index(d.get("shape", "SINE"))
     l.min       = d.get("min", 0)
     l.max       = d.get("max", 127)
@@ -320,6 +339,7 @@ def _default_lfo_dict():
     return {
         "channel": 1,
         "cc":      1,
+        "target":  "CC",
         "shape":   "SINE",
         "min":     0,
         "max":     127,
@@ -341,7 +361,7 @@ def _build_default_file():
     return data
 
 # Fixed key order for writing LFO dicts - avoids .items() which is unreliable in CircuitPython
-LFO_KEYS = ["channel", "cc", "shape", "min", "max", "offset", "div"]
+LFO_KEYS = ["channel", "cc", "target", "shape", "min", "max", "offset", "div"]
 
 def _write_json(data):
     """Write the full presets dict to disk in human-readable format."""
@@ -448,7 +468,8 @@ def update_cursor():
 
 def update_panel():
     l = lfos[S["selected"]]
-    vals = [l.channel, l.cc, SHAPES[l.shape], l.min, l.max, ("+" + str(l.offset) if l.offset > 0 else str(l.offset)), DIV_LABELS[l.div_index]]
+    target_display = str(l.cc) if l.target_type == "CC" else l.target_type
+    vals = [l.channel, target_display, SHAPES[l.shape], l.min, l.max, ("+" + str(l.offset) if l.offset > 0 else str(l.offset)), DIV_LABELS[l.div_index]]
     for i, v in enumerate(vals):
         param_labels[i].text = PARAMS[i] + "" + str(v)
         param_labels[i].color = COLOR_PARAM_SELECTED if i == S["param_index"] else COLOR_PARAM_NORMAL
@@ -471,6 +492,12 @@ def update_grid():
             color = (intensity << 16) | (intensity << 8)
         elif l.shape in (6, 7):
             base = COLOR_IMX if l.shape == 6 else COLOR_IMY
+            r = ((base >> 16) & 0xFF) * intensity // 255
+            g = ((base >> 8)  & 0xFF) * intensity // 255
+            b = (base & 0xFF)          * intensity // 255
+            color = (r << 16) | (g << 8) | b
+        elif l.shape in (8, 9):
+            base = COLOR_SAWU if l.shape == 8 else COLOR_SAWD
             r = ((base >> 16) & 0xFF) * intensity // 255
             g = ((base >> 8)  & 0xFF) * intensity // 255
             b = (base & 0xFF)          * intensity // 255
@@ -516,17 +543,35 @@ pressed_buttons = set()
 while True:
 
     # --- MIDI RECEIVE ---
-    msg = midi.receive()
-    if msg:
+    # Drain all currently queued MIDI messages every pass.
+    # This keeps real-time Clock/Start/Continue/Stop responsive even while
+    # the controller is also updating the display and transmitting modulation.
+    for _ in range(64):
+        msg = midi.receive()
+        if msg is None:
+            break
+
         if isinstance(msg, MIDIUnknownEvent):
             status = msg.status
-            if status == 0xF8:    # clock tick
+
+            if status == 0xF8:    # MIDI Clock
                 S["clock_mode"] = "external"
                 clock_counter += 1
-            elif status == 0xFA:  # start
+
+            elif status == 0xFA:  # MIDI Start: restart from beginning
                 S["running"] = True
-            elif status == 0xFC:  # stop
+                clock_counter = 0
+                for l in lfos:
+                    l.phase = 0.0
+                    l.tick_count = 0
+
+            elif status == 0xFB:  # MIDI Continue: resume current phase
+                S["running"] = True
+                clock_counter = 0
+
+            elif status == 0xFC:  # MIDI Stop: stop immediately
                 S["running"] = False
+                clock_counter = 0
 
     # --- CLOCK ENGINE ---
     if S["running"]:
@@ -538,20 +583,36 @@ while True:
 
         if clock_counter > 0:
             cc_accumulator = {}
+            pb_accumulator = {}
+            at_accumulator = {}
 
             for l in lfos:
-                l.tick_count += clock_counter
-                if l.tick_count >= CLOCK_DIVS[l.div_index]:
-                    l.tick_count = 0
-                    l.advance()
-                    val = l.compute()
-                    if val is not None:
-                        key = (l.channel - 1, l.cc)
+                # Advance phase directly from MIDI-clock ticks so the selected
+                # division is the length of one complete musical LFO cycle.
+                l.advance(clock_counter)
+                val = l.compute()
+                if val is not None:
+                    ch = l.channel - 1
+                    if l.target_type == "CC":
+                        key = (ch, l.cc)
                         cc_accumulator[key] = cc_accumulator.get(key, 0) + val
+                    elif l.target_type == "PB":
+                        pb_accumulator[ch] = pb_accumulator.get(ch, 0) + val
+                    elif l.target_type == "AT":
+                        at_accumulator[ch] = at_accumulator.get(ch, 0) + val
 
             for (ch, cc), total in cc_accumulator.items():
                 total = max(0, min(127, total))
                 midi.send(ControlChange(cc, int(total)), channel=ch)
+
+            for ch, total in pb_accumulator.items():
+                total = max(0, min(127, total))
+                bend = int((total / 127) * 16383)
+                midi.send(PitchBend(bend), channel=ch)
+
+            for ch, total in at_accumulator.items():
+                total = max(0, min(127, total))
+                midi.send(ChannelPressure(int(total)), channel=ch)
 
             clock_counter = 0
 
@@ -580,7 +641,9 @@ while True:
                     S["edit_mode"] = True
                 elif event.key_number == BTN_B:
                     l = lfos[S["selected"]]
+                    paint_channel = l.channel
                     l.shape = (l.shape + 1) % len(SHAPES)
+                    l.div_index = random.randrange(len(CLOCK_DIVS))
 
             else:
                 if event.key_number == BTN_A:
@@ -629,6 +692,8 @@ while True:
                     if BTN_B in pressed_buttons:
                         l = lfos[S["selected"]]
                         l.shape = (l.shape + 1) % len(SHAPES)
+                        l.channel = paint_channel
+                        l.div_index = random.randrange(len(CLOCK_DIVS))
 
             else:
                 l = lfos[S["selected"]]
@@ -638,7 +703,14 @@ while True:
                     S["param_index"] = (S["param_index"] + 1) % len(PARAMS)
                 elif direction == "left":
                     if S["param_index"] == 0: l.channel   = max(1,       l.channel   - step)
-                    elif S["param_index"] == 1: l.cc       = max(0,       l.cc        - step)
+                    elif S["param_index"] == 1:
+                        if l.target_type == "AT":
+                            l.target_type = "PB"
+                        elif l.target_type == "PB":
+                            l.target_type = "CC"
+                            l.cc = 127
+                        else:
+                            l.cc = max(0, l.cc - step)
                     elif S["param_index"] == 2: l.shape    = (l.shape - 1) % len(SHAPES)
                     elif S["param_index"] == 3: l.min      = max(0,       l.min       - step)
                     elif S["param_index"] == 4: l.max      = max(l.min,   l.max       - step)
@@ -646,7 +718,14 @@ while True:
                     elif S["param_index"] == 6: l.div_index = max(0,      l.div_index - 1)
                 elif direction == "right":
                     if S["param_index"] == 0: l.channel   = min(16,      l.channel   + step)
-                    elif S["param_index"] == 1: l.cc       = min(127,     l.cc        + step)
+                    elif S["param_index"] == 1:
+                        if l.target_type == "CC":
+                            if l.cc >= 127:
+                                l.target_type = "PB"
+                            else:
+                                l.cc = min(127, l.cc + step)
+                        elif l.target_type == "PB":
+                            l.target_type = "AT"
                     elif S["param_index"] == 2: l.shape    = (l.shape + 1) % len(SHAPES)
                     elif S["param_index"] == 3: l.min      = min(l.max,   l.min       + step)
                     elif S["param_index"] == 4: l.max      = min(127,     l.max       + step)
@@ -685,4 +764,3 @@ while True:
         display_timer = time.monotonic()
         update_panel()
         update_run_indicator()
-
