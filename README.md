@@ -46,10 +46,12 @@ Current shapes:
 -   **LGHT** --- PyGamer light sensor mapped to MIDI CC
 -   **IMX** --- PyGamer accelerometer X-axis mapped to MIDI CC
 -   **IMY** --- PyGamer accelerometer Y-axis mapped to MIDI CC
+-   **RAMPU** --- Ram-wave up modulation
+-   **RAMPD** --- Ram-wave down modulation
 
 ### START --- Run / Stop
 
-Press **START** to toggle modulation playback.
+Press **START** to toggle modulation playback. If using external clock the device will respond to clock ticks and start/stop messages
 
 -   **RUN** --- MIDI modulation is active.
 -   **STOP** --- MIDI modulation is stopped.
