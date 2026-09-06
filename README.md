@@ -99,8 +99,11 @@ Presets are stored in `presets.json`.
   Control          Action
   ---------------- --------------------------------
   Joystick         Navigate 4×4 LFO grid
+  
   A + Up/Down      Select parameter
+  
   A + Left/Right   Adjust parameter
+  
   B                Cycle shape on current square
   B + Joystick     Paint/cycle shapes across grid
   START            Run / Stop
