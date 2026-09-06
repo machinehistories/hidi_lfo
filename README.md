@@ -1,5 +1,8 @@
 # hidi_lfo
 # PyGamer 16-LFO MIDI Controller
+Running: Adafruit CircuitPython 9.2.9 on 2025-09-07; Adafruit PyGamer with samd51j19
+Board ID:pygamer
+Libraries and working code supplied in the repo just download all repo files to your PyGamer
 
 ## Controls
 
