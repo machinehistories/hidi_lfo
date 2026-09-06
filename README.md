@@ -105,8 +105,12 @@ Presets are stored in `presets.json`.
   A + Left/Right   Adjust parameter
   
   B                Cycle shape on current square
+  
   B + Joystick     Paint/cycle shapes across grid
+  
   START            Run / Stop
+  
   SELECT           Open / close Globals
+  
   B in Globals     Execute SAVE or LOAD
 
