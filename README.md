@@ -106,7 +106,7 @@ Presets are stored in `presets.json`.
   
   B                Cycle shape on current square
   
-  B + Joystick     Paint/cycle shapes across grid
+  B + Joystick     Paint/cycle shapes across grid/paint the current channel value/randomize the rate
   
   START            Run / Stop
   
